@@ -3,6 +3,7 @@ import ProductsPage from "../pages/Products/ProductsPage";
 import Layout from "../components/layout/Layout";
 import ProductDetailsPage from "../pages/ProductDetails/ProductDetailsPage";
 import CartPage from "../pages/cart/CartPage";
+import NotFound from "../pages/NotFound/NotFound";
 
 function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ function AppRoutes() {
           <Route path="/" element={<ProductsPage />} />
           <Route path="/products/:id" element={<ProductDetailsPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
