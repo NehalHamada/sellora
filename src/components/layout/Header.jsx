@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "../../hooks/useCart";
 
 function Header() {
   const { cart } = useCart();
-
   return (
     <div className="navbar bg-base-100 shadow-sm px-4">
       <Link to="/" className="flex-1">
-        <img src={logo} className="w-28" />
+        <img src="/images/logo.png" className="w-28" />
       </Link>
       <div className="flex items-center gap-4">
         <Link
