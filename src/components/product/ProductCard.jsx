@@ -1,7 +1,9 @@
 import { ShoppingCart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
 
 function ProductCard({ item }) {
+  const { addToCart } = useCart();
   return (
     <div className="group bg-slate-50 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-200/50 flex flex-col h-full">
       <figure className="h-64  flex items-center justify-center p-4 relative">
@@ -38,7 +40,12 @@ function ProductCard({ item }) {
         </div>
         <div className="flex justify-between items-center mt-3">
           <p className="font-bold">${item.price}</p>
-          <div className="cursor-pointer p-2 rounded-md border-purple-400 hover:bg-purple-400  hover:text-white">
+          <div
+            onClick={() => {
+              console.log("Clicked");
+              addToCart(item);
+            }}
+            className="cursor-pointer p-2 rounded-md border-purple-400 hover:bg-purple-400  hover:text-white">
             <ShoppingCart />
           </div>
         </div>

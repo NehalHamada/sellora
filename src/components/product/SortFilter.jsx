@@ -12,7 +12,7 @@ export default function SortFilter({
           onClick={() => onCategoryChange("")}
           className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer ${
             categoryFilter === ""
-              ? "bg-purple-500 text-white border-purple-500"
+              ? "bg-purple-300 text-white border-purple-500"
               : "border-purple-400"
           }`}>
           All
@@ -21,7 +21,7 @@ export default function SortFilter({
           <button
             key={cat}
             onClick={() => onCategoryChange(cat)}
-            className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer ${
+            className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer hover:bg-purple-300 hover:border-none hover:text-white hover:scale-120 ${
               categoryFilter === cat
                 ? "bg-purple-500 text-white border-purple-500"
                 : "border-purple-400"

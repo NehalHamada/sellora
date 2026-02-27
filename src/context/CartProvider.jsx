@@ -12,7 +12,9 @@ export function CartProvider({ children }) {
   }, [cart]);
 
   const addToCart = (product) => {
+    console.log("ADDING:", product);
     setCart((prev) => {
+      console.log("PREV CART:", prev);
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
         return prev.map((item) =>

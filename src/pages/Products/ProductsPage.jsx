@@ -65,7 +65,7 @@ function ProductsPage() {
             categoryFilter={categoryFilter}
             onCategoryChange={setCategoryFilter}
           />
-          <ProductList currentProduct={currentProduct} />
+          <ProductList currentProduct={currentProduct} data={data} />
           <Pagination
             totalPages={totalPages}
             currentPage={currentPage}
