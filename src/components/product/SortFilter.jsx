@@ -10,7 +10,7 @@ export default function SortFilter({
       <div className="flex gap-2 flex-wrap">
         <button
           onClick={() => onCategoryChange("")}
-          className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer ${
+          className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer border-none ${
             categoryFilter === ""
               ? "bg-purple-300 text-white border-purple-500"
               : "border-purple-400"
@@ -21,7 +21,7 @@ export default function SortFilter({
           <button
             key={cat}
             onClick={() => onCategoryChange(cat)}
-            className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer hover:bg-purple-300 hover:border-none hover:text-white hover:scale-120 ${
+            className={`px-3 py-1.5 rounded-2xl border-2 cursor-pointer hover:bg-purple-300 hover:border-none hover:text-white ${
               categoryFilter === cat
                 ? "bg-purple-500 text-white border-purple-500"
                 : "border-purple-400"
