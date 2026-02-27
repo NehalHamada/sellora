@@ -6,22 +6,22 @@ function ProductCard({ item }) {
   const { addToCart } = useCart();
   return (
     <div className="group bg-slate-50 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-200/50 flex flex-col h-full">
-      <figure className="h-64  flex items-center justify-center p-4 relative">
-        <img
-          src={item.image}
-          alt={item.title}
-          className="h-full rounded-md object-contain transition-transform duration-700 group-hover:scale-110"
-        />
-        <span className="absolute top-2 right-2 px-3 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full bg-white/80 text-slate-500 backdrop-blur-md">
-          {item.category}
-        </span>
-      </figure>
+      <Link to={`/products/${item.id}`}>
+        <figure className="h-64  flex items-center justify-center p-4 relative">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-full rounded-md object-contain transition-transform duration-700 group-hover:scale-110"
+          />
+          <span className="absolute top-2 right-2 px-3 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full bg-white/80 text-slate-500 backdrop-blur-md">
+            {item.category}
+          </span>
+        </figure>
+      </Link>
       <div className="card-body flex flex-col flex-1 ">
-        <Link
-          to={`/products/${item.id}`}
-          className="card-title text-base font-semibold line-clamp-2 min-h-12 transition-colors group-hover:text-purple-400">
+        <div className="card-title text-base font-semibold line-clamp-2 min-h-12 transition-colors group-hover:text-purple-400">
           {item.title}
-        </Link>
+        </div>
 
         <div className="flex items-center gap-2">
           <div className="flex gap-0.5">
